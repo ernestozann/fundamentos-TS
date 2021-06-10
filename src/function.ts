@@ -51,3 +51,22 @@ let createPic = (title: string, date:string, size:SquareSize): object => {
 
 const picture = createPic('Platzi session', '2021-06-10', '100x100');
 console.log('picture', picture);
+
+//types of returns with TS
+
+function showError(code: number, message:string): never | string {
+	if(message === 'error') {
+		throw new Error(`${message}. Code error: ${code}`);
+	} else {
+		return 'An error has ocurred';
+	}
+};
+
+try {
+	let result = showError(404, 'Error not Found');// string
+	console.log('Result:', result);
+	result = showError(404, 'error');// never
+	console.log('Result:', result);
+} catch (error) {
+	
+}
