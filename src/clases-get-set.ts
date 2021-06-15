@@ -84,9 +84,9 @@ album.addPicture(picture);
 console.log('album', album);
 
 //accessing to the public members of the class '3'
-console.log('picture.id', picture.id);
+console.log('picture.id', picture.id); //get id()
 
-picture.id = 100; //private
+picture.id = 100; //private, set id(100)
 picture.title = 'Another title'; //private
 album.title = 'Personal activities'; //private
 console.log('album', album);
